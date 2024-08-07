@@ -22,7 +22,7 @@ conn();
 
 app.use(cookieParser());
 app.use(cors({
-    origin: [process.env.REACTURL],
+    origin: process.env.REACTURL,
     credentials: true
 }));
 app.use(express.json());
