@@ -99,14 +99,14 @@ app.post('/login', async (req, res) => {
                 maxAge: 5 * 60 * 1000,
                 httpOnly: true,
                 secure: true,
-                sameSite: 'Strict'
+                sameSite: 'None'
             });
 
             res.cookie('refreshToken', refreshToken, {
                 maxAge: 2 * 60 * 60 * 1000,
                 httpOnly: true,
                 secure: true,
-                sameSite: 'Strict'
+                sameSite: 'None'
             });
 
             return res.json({ login: true, user: userDoc });
