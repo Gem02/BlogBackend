@@ -288,7 +288,7 @@ app.get('/sponsordPost', async (req, res) =>{
 
 app.get('/featuresPost', async (req, res) =>{
     try {
-        const featured = await postmodel.find({ featured: true }).limit(4);
+        const featured = await postmodel.find({ featured: true }).limit(2);
         if (featured) {
             return res.status(200).json(featured);
         }
